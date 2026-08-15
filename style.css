@@ -157,7 +157,8 @@ a:hover, a:focus-visible {
 
 /* links inside body prose carry a standing underline so they read as
    links without a hover; the footer row stays clean */
-.lede a {
+.lede a,
+.album figcaption a {
   border-bottom-color: var(--rule);
 }
 
