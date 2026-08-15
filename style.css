@@ -155,6 +155,12 @@ a:hover, a:focus-visible {
   border-bottom-color: var(--accent);
 }
 
+/* links inside body prose carry a standing underline so they read as
+   links without a hover; the footer row stays clean */
+.lede a {
+  border-bottom-color: var(--rule);
+}
+
 @media (max-width: 40rem) {
   main { padding: 4rem 1.25rem 3.5rem; }
   .hero { margin-bottom: 3rem; }
