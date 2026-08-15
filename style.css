@@ -1,0 +1,146 @@
+:root {
+  --ink: #23211d;
+  --muted: #6f6a60;
+  --rule: #d8d3c8;
+  --paper: #fbfaf7;
+  --accent: #1d6b5a;
+  --measure: 34rem;
+  --wide: 68rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", Times, serif;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.hero {
+  margin: 0 0 4.5rem;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.opening {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.0625rem;
+  font-weight: normal;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 3rem;
+}
+
+.lede {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0 0 1.6rem;
+  text-wrap: pretty;
+}
+
+.lede:last-child { margin-bottom: 0; }
+
+.credentials {
+  max-width: var(--measure);
+  margin: 3.5rem auto 0;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.875rem;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.credentials span::before {
+  content: "·";
+  margin: 0 0.6em;
+  color: var(--rule);
+}
+
+.album {
+  margin: 6rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 3rem;
+}
+
+.album figure {
+  margin: 0;
+}
+
+.album img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+}
+
+.album .tall img { object-position: center 38%; }
+
+.album figcaption {
+  margin-top: 0.85rem;
+  max-width: 32em;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+footer {
+  max-width: var(--measure);
+  margin: 6rem auto 0;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 0.9375rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+
+a:hover, a:focus-visible {
+  border-bottom-color: var(--accent);
+}
+
+@media (max-width: 40rem) {
+  main { padding: 4rem 1.25rem 3.5rem; }
+  h1 { margin-bottom: 2rem; }
+  .lede { font-size: 1.3125rem; }
+  .album { margin-top: 4rem; gap: 2rem; }
+  footer { margin-top: 4rem; }
+  .links { gap: 1.5rem; }
+}
